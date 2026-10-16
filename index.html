@@ -776,7 +776,34 @@
         .w-full {
             width: 100%;
         }
-    </style>
+    
+        .repo-tools{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+        .repo-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+        .repo-card-head h3{margin-top:0;min-width:0;overflow-wrap:anywhere}
+        .repo-save{flex:0 0 auto;background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.35);color:#8af5ff;border-radius:8px;padding:7px 10px;cursor:pointer;font:inherit;font-size:.78rem}
+        .repo-save:hover,.repo-save.is-saved{background:rgba(0,229,255,.18);border-color:#00e5ff;color:#fff}
+        .repo-controls select{min-width:145px}
+        @media(max-width:700px){.repo-controls select,.repo-controls input{width:100%;min-width:0}.repo-tools .repo-button{flex:1 1 140px}}
+
+</style>
+
+<style id="vault-premium-overrides">
+:root{color-scheme:dark;--bg-primary:#070910;--bg-secondary:#0c1120;--bg-card:#10182a;--bg-card-hover:#16233b;--border-glow:rgba(0,229,255,.23);--neon-cyan:#00e5ff;--neon-magenta:#ff36c8;--neon-purple:#9d7bff;--text-primary:#eef5ff;--text-secondary:#aab8cf;--text-muted:#74839f;--radius:18px}
+body{background-color:#070910;background-image:radial-gradient(ellipse at 10% 0%,rgba(0,229,255,.09),transparent 35%),radial-gradient(ellipse at 90% 15%,rgba(157,123,255,.09),transparent 32%),linear-gradient(180deg,#070910,#080c16 60%,#070910)}
+.app-header{background:rgba(7,9,16,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,229,255,.15)}
+.logo-icon{border:1px solid #00e5ff;box-shadow:0 0 22px rgba(0,229,255,.3);border-radius:8px;position:relative}
+.logo-icon:after{content:"";position:absolute;inset:6px;border:1px solid #9d7bff;transform:rotate(45deg);border-radius:3px}
+.card,.toc-wrap,.global-note,.app-footer{border-color:rgba(0,229,255,.14)}
+button,.lang-select,input,select{font:inherit} .lang-select{background:#0d1525;color:#eef5ff;border:1px solid rgba(0,229,255,.28);border-radius:10px}
+.emoji{display:none!important}#themeToggle{font-size:0;width:38px;height:38px;border:1px solid rgba(0,229,255,.25);background:#10182a;position:relative}#themeToggle:after{content:"";width:13px;height:13px;border:2px solid #00e5ff;border-radius:50%;display:block;margin:auto;box-shadow:0 0 12px #00e5ff}
+.repo-explorer{margin:38px 0;padding:clamp(18px,3vw,32px);border:1px solid rgba(0,229,255,.22);border-radius:22px;background:linear-gradient(145deg,rgba(16,24,42,.97),rgba(9,14,26,.98));box-shadow:0 20px 80px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.025)}
+.repo-kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#00e5ff;font-weight:800}.repo-heading{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;margin:10px 0;color:#f1f7ff}.repo-lead{color:#aab8cf;max-width:760px;margin-bottom:24px}.repo-controls{display:grid;grid-template-columns:minmax(180px,1fr) minmax(140px,220px) auto;gap:10px;margin:18px 0}.repo-controls input,.repo-controls select{width:100%;min-width:0;padding:12px 14px;border-radius:11px;color:#eef5ff;background:#080e1b;border:1px solid #263750;outline:none}.repo-controls input:focus,.repo-controls select:focus{border-color:#00e5ff;box-shadow:0 0 0 3px rgba(0,229,255,.1)}.repo-button{padding:11px 17px;border:1px solid rgba(0,229,255,.5);border-radius:11px;color:#041018;background:linear-gradient(120deg,#00e5ff,#8e9bff);font-weight:800;cursor:pointer}.repo-button.secondary{background:#111c30;color:#dceaff;border-color:#314662}.repo-stats{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;color:#8fa3c0;font-size:.86rem}.repo-stat{padding:7px 10px;border:1px solid #24354c;border-radius:9px;background:#0b1220}.repo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.repo-card{padding:18px;border:1px solid #22334b;border-radius:15px;background:linear-gradient(145deg,#101a2c,#0c1322);min-width:0;transition:transform .2s,border-color .2s}.repo-card:hover{transform:translateY(-2px);border-color:rgba(0,229,255,.55)}.repo-card h3{font-size:1rem;overflow-wrap:anywhere;margin-bottom:8px}.repo-card h3 a{color:#e9f7ff;text-decoration:none}.repo-card h3 a:hover{color:#00e5ff}.repo-card p{font-size:.9rem;color:#9eafc8;min-height:44px;overflow-wrap:anywhere}.repo-meta{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0;color:#92a6c2;font-size:.78rem}.repo-chip{padding:4px 8px;border-radius:7px;background:#111f32;border:1px solid #253b54}.repo-topics{display:flex;gap:6px;flex-wrap:wrap}.repo-topics span{font-size:.72rem;color:#6feaff;background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.14);padding:3px 7px;border-radius:6px}.repo-status{padding:22px;text-align:center;color:#aab8cf;border:1px dashed #2a3c54;border-radius:14px}.repo-pager{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap}.repo-disclaimer{font-size:.78rem;color:#71839e;line-height:1.6;margin-top:18px}.repo-count{color:#00e5ff;font-weight:700}.repo-load{min-width:150px}.repo-spinner{width:16px;height:16px;border:2px solid #34506a;border-top-color:#00e5ff;border-radius:50%;display:inline-block;animation:repo-spin .8s linear infinite;vertical-align:middle;margin-right:8px}@keyframes repo-spin{to{transform:rotate(360deg)}}
+@media(max-width:720px){.repo-controls{grid-template-columns:1fr}.repo-grid{grid-template-columns:1fr}.repo-card p{min-height:0}.repo-explorer{margin:24px 0}.header-inner{gap:12px}.logo-sub{max-width:150px}}
+</style>
+
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta name="theme-color" content="#080b14">
+    <link rel="icon" href="./assets/vault-icon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -799,24 +826,24 @@
             <div class="header-actions">
                 <div class="lang-select-wrap">
                     <select class="lang-select" id="langSelect" aria-label="Select language">
-                        <option value="en">🇬🇧 English</option>
-                        <option value="bn">🇧🇩 বাংলা</option>
-                        <option value="hi">🇮🇳 हिन्दी</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="de">🇩🇪 Deutsch</option>
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="ja">🇯🇵 日本語</option>
-                        <option value="ar">🇸🇦 العربية</option>
-                        <option value="ru">🇷🇺 Русский</option>
-                        <option value="pt">🇵🇹 Português</option>
-                        <option value="ur">🇵🇰 اردو</option>
-                        <option value="it">🇮🇹 Italiano</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                        <option value="tr">🇹🇷 Türkçe</option>
+                        <option value="en">English</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="ar">العربية</option>
+                        <option value="ru">Русский</option>
+                        <option value="pt">Português</option>
+                        <option value="ur">اردو</option>
+                        <option value="it">Italiano</option>
+                        <option value="ko">한국어</option>
+                        <option value="tr">Türkçe</option>
                     </select>
                 </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
             </div>
         </div>
     </header>
@@ -1365,230 +1392,219 @@
             });
         }
 
-        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-        // 6. THEME TOGGLE (Dark / Light)
-        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        // Dark neon theme is intentionally fixed; no light-theme toggle.
         const themeBtn = document.getElementById('themeToggle');
-        let isDark = true;
-        if (themeBtn) {
-            themeBtn.addEventListener('click', () => {
-                isDark = !isDark;
-                const root = document.documentElement;
-                if (isDark) {
-                    root.style.setProperty('--bg-primary', '#0a0a12');
-                    root.style.setProperty('--bg-secondary', '#12121f');
-                    root.style.setProperty('--bg-card', '#18182b');
-                    root.style.setProperty('--bg-card-hover', '#1f1f3a');
-                    root.style.setProperty('--text-primary', '#e8e8f0');
-                    root.style.setProperty('--text-secondary', '#b0b0c8');
-                    root.style.setProperty('--text-muted', '#7878a0');
-                    themeBtn.textContent = '🌙';
-                } else {
-                    root.style.setProperty('--bg-primary', '#f0f0f8');
-                    root.style.setProperty('--bg-secondary', '#e4e4ee');
-                    root.style.setProperty('--bg-card', '#ffffff');
-                    root.style.setProperty('--bg-card-hover', '#f4f4fc');
-                    root.style.setProperty('--text-primary', '#1a1a2e');
-                    root.style.setProperty('--text-secondary', '#3a3a5a');
-                    root.style.setProperty('--text-muted', '#6a6a8a');
-                    themeBtn.textContent = '☀️';
-                }
-            });
-        }
+        if (themeBtn) themeBtn.setAttribute('aria-label', 'Dark neon theme enabled');
 
-        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-        // 7. TRANSLATION (LibreTranslate API)
-        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        // 7. Static-host translation: no server/backend required.
+        // Providers are public third-party services; availability, CORS and quotas can vary.
         const langSelect = document.getElementById('langSelect');
-        const translatableElements = document.querySelectorAll('[data-translate]');
-        // Cache for translated texts
         const translationCache = new Map();
-
-        // Map of language codes to names
-        const langNames = {
-            en: 'English',
-            bn: 'Bangla',
-            hi: 'Hindi',
-            es: 'Spanish',
-            fr: 'French',
-            de: 'German',
-            zh: 'Chinese',
-            ja: 'Japanese',
-            ar: 'Arabic',
-            ru: 'Russian',
-            pt: 'Portuguese',
-            ur: 'Urdu',
-            it: 'Italian',
-            ko: 'Korean',
-            tr: 'Turkish'
-        };
-
-        // Collect all translatable text with their keys
-        function collectTranslatableTexts() {
-            const map = new Map();
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                // For code blocks, get the prompt-text inside
-                let text = '';
-                if (el.classList.contains('prompt-text')) {
-                    text = el.textContent.trim();
-                } else if (el.classList.contains('code-block')) {
-                    // Skip the code-block itself, handle inner prompt-text
-                    return;
-                } else {
-                    text = el.textContent.trim();
+        const langNames = {en:'English',bn:'Bangla',hi:'Hindi',es:'Spanish',fr:'French',de:'German',zh:'Chinese',ja:'Japanese',ar:'Arabic',ru:'Russian',pt:'Portuguese',ur:'Urdu',it:'Italian',ko:'Korean',tr:'Turkish'};
+        const originalTextNodes = [];
+        function captureTextNodes(root=document.querySelector('main')) {
+            if (!root) return;
+            const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(node){
+                if(!node.nodeValue.trim() || node.parentElement?.closest('script,style,textarea,input,select,option,button,.repo-explorer,.emoji,[data-no-translate]')) return NodeFilter.FILTER_REJECT;
+                return NodeFilter.FILTER_ACCEPT;
+            }});
+            while(walker.nextNode()){
+                const n=walker.currentNode;
+                if(!Object.prototype.hasOwnProperty.call(n,'__vaultOriginal')){
+                    Object.defineProperty(n,'__vaultOriginal',{value:n.nodeValue,writable:true,configurable:true});
+                    originalTextNodes.push(n);
                 }
-                if (text && key) {
-                    map.set(key, text);
-                }
-            });
-            // Also collect prompt-text inside code blocks specifically
-            document.querySelectorAll('.prompt-text').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key) {
-                    const text = el.textContent.trim();
-                    if (text) {
-                        map.set(key, text);
-                    }
-                }
-            });
-            return map;
-        }
-
-        // Translate text using LibreTranslate
-        async function translateText(text, targetLang) {
-            if (targetLang === 'en') return text;
-            if (!text || text.length < 2) return text;
-
-            // Check cache
-            const cacheKey = `${targetLang}:${text.substring(0, 100)}`;
-            if (translationCache.has(cacheKey)) {
-                return translationCache.get(cacheKey);
             }
-
+        }
+        captureTextNodes();
+        function splitTranslationText(text, max=700) {
+            const parts=[]; let rest=text;
+            while(rest.length>max){
+                let cut=Math.max(rest.lastIndexOf('. ',max),rest.lastIndexOf('! ',max),rest.lastIndexOf('? ',max),rest.lastIndexOf(' ',max));
+                if(cut<Math.floor(max*.55))cut=max;
+                parts.push(rest.slice(0,cut+1)); rest=rest.slice(cut+1);
+            }
+            if(rest)parts.push(rest);
+            return parts;
+        }
+        async function fetchJson(url, options={}, timeout=10000) {
+            const controller=new AbortController();
+            const timer=setTimeout(()=>controller.abort(),timeout);
             try {
-                const response = await fetch('https://libretranslate.com/translate', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        q: text,
-                        source: 'en',
-                        target: targetLang,
-                        format: 'text',
-                    }),
-                });
-
-                if (!response.ok) {
-                    console.warn('Translation API error:', response.status);
-                    return text;
-                }
-
-                const data = await response.json();
-                if (data && data.translatedText) {
-                    const translated = data.translatedText;
-                    translationCache.set(cacheKey, translated);
-                    return translated;
-                }
-                return text;
-            } catch (err) {
-                console.warn('Translation failed:', err);
-                return text;
-            }
+                const response=await fetch(url,{...options,signal:controller.signal});
+                if(!response.ok)throw new Error('Translation service HTTP '+response.status);
+                return await response.json();
+            } finally { clearTimeout(timer); }
         }
-
-        // Translate all elements with data-translate
-        async function translatePage(targetLang) {
-            if (targetLang === 'en') {
-                // Reset to original text from data attribute store
-                document.querySelectorAll('[data-translate]').forEach(el => {
-                    const key = el.getAttribute('data-translate');
-                    if (key && el._originalText) {
-                        el.textContent = el._originalText;
-                    }
-                });
-                document.querySelectorAll('.prompt-text').forEach(el => {
-                    const key = el.getAttribute('data-translate');
-                    if (key && el._originalText) {
-                        el.textContent = el._originalText;
-                    }
-                });
-                return;
-            }
-
-            // Store original texts if not already stored
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key && !el._originalText) {
-                    el._originalText = el.textContent.trim();
-                }
-            });
-            document.querySelectorAll('.prompt-text').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key && !el._originalText) {
-                    el._originalText = el.textContent.trim();
-                }
-            });
-
-            // Collect all unique texts to translate
-            const textsToTranslate = new Map();
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key && el._originalText) {
-                    textsToTranslate.set(key, el._originalText);
-                }
-            });
-            document.querySelectorAll('.prompt-text').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key && el._originalText) {
-                    textsToTranslate.set(key, el._originalText);
-                }
-            });
-
-            // Translate each unique text
-            const translatedMap = new Map();
-            for (const [key, text] of textsToTranslate) {
-                if (text && text.length > 1) {
-                    const translated = await translateText(text, targetLang);
-                    translatedMap.set(key, translated);
-                } else {
-                    translatedMap.set(key, text);
-                }
-            }
-
-            // Apply translations
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key && translatedMap.has(key)) {
-                    el.textContent = translatedMap.get(key);
-                }
-            });
-            document.querySelectorAll('.prompt-text').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (key && translatedMap.has(key)) {
-                    el.textContent = translatedMap.get(key);
-                }
-            });
+        async function translateChunk(text,target) {
+            try {
+                const j=await fetchJson('https://api.mymemory.translated.net/get?q='+encodeURIComponent(text)+'&langpair=en|'+encodeURIComponent(target),{},12000);
+                if(j.responseStatus===200&&j.responseData?.translatedText)return j.responseData.translatedText;
+            } catch(e) {}
+            try {
+                const j=await fetchJson('https://libretranslate.com/translate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q:text,source:'en',target,format:'text'})},12000);
+                if(j.translatedText)return j.translatedText;
+            } catch(e) {}
+            throw new Error('Public translation providers unavailable');
         }
-
-        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-        // 8. LANGUAGE SELECTOR HANDLER
-        // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-        if (langSelect) {
-            langSelect.addEventListener('change', async function() {
-                const lang = this.value;
-                // Show loading state
-                showToast('⏳ Translating...');
-                try {
-                    await translatePage(lang);
-                    showToast(`✓ Translated to ${langNames[lang] || lang}`);
-                } catch (err) {
-                    console.error('Translation error:', err);
-                    showToast('⚠️ Translation failed, please try again.');
-                }
-            });
+        async function translateText(text,target){
+            if(target==='en'||!text.trim())return text;
+            const key=target+'|'+text;
+            if(translationCache.has(key))return translationCache.get(key);
+            const chunks=splitTranslationText(text);
+            const translated=[];
+            for(const chunk of chunks) translated.push(await translateChunk(chunk,target));
+            const result=translated.join('');
+            translationCache.set(key,result);
+            return result;
         }
+        async function translatePage(target){
+            captureTextNodes();
+            if(target==='en'){originalTextNodes.forEach(n=>{if(n.isConnected)n.nodeValue=n.__vaultOriginal;});return;}
+            const live=originalTextNodes.filter(n=>n.isConnected && n.__vaultOriginal.trim());
+            if(!live.length)return;
+            let failures=0;
+            for(let i=0;i<live.length;i+=2){
+                const batch=live.slice(i,i+2);
+                const translated=await Promise.all(batch.map(async n=>{
+                    try{return await translateText(n.__vaultOriginal,target);}
+                    catch(e){failures++;return n.__vaultOriginal;}
+                }));
+                batch.forEach((n,j)=>{if(n.isConnected)n.nodeValue=translated[j];});
+            }
+            if(failures)throw new Error(failures+' text segments could not be translated');
+        }
+        if(langSelect)langSelect.addEventListener('change',async function(){
+            const lang=this.value;showToast('Translating…');this.disabled=true;
+            try{await translatePage(lang);showToast(lang==='en'?'Original language restored':'Translated to '+(langNames[lang]||lang));}
+            catch(err){console.error('Translation error',err);showToast('Some text could not be translated. Check internet/provider availability; failed text remains unchanged.');}
+            finally{this.disabled=false;}
+        });
+
+        // 8. GitHub explorer: direct public GitHub REST API, local favorites, and export.
+        // Static-only deployment. GitHub unauthenticated rate limits and Search API caps apply.
+        const repoExplorerMarkup = `
+        <section class="repo-explorer" id="github-library" aria-labelledby="repoHeading" data-no-translate>
+          <div class="repo-kicker">Open-source intelligence / GitHub</div>
+          <h2 class="repo-heading" id="repoHeading">Jailbreak Research Repository Index</h2>
+          <p class="repo-lead">Explore public repositories using GitHub's API. Save useful projects locally, export your shortlist, and continue with Load More pagination. No backend or API key is required.</p>
+          <div class="repo-controls">
+            <input id="repoQuery" type="search" placeholder="Search repositories or keywords…" aria-label="Search repositories" />
+            <select id="repoTopic" aria-label="Research topic">
+              <option value="jailbreaking">Jailbreaking</option><option value="llm-jailbreak">LLM jailbreak</option><option value="llm-jailbreaks">LLM jailbreaks</option><option value="jailbreak-prompt">Jailbreak prompt</option><option value="jailbreak-prompts">Jailbreak prompts</option><option value="prompt-injection">Prompt injection</option><option value="ai-red-teaming">AI red teaming</option><option value="llm-security">LLM security</option><option value="adversarial-machine-learning">Adversarial ML</option>
+            </select>
+            <select id="repoSort" aria-label="Sort repositories"><option value="stars">Most stars</option><option value="updated">Recently updated</option><option value="forks">Most forks</option><option value="help-wanted-issues">Help wanted</option></select>
+            <button class="repo-button" id="repoSearch">Search GitHub</button>
+          </div>
+          <div class="repo-tools">
+            <button class="repo-button secondary" id="repoShowSaved" aria-pressed="false">Saved only: Off</button>
+            <button class="repo-button secondary" id="repoExport">Export saved JSON</button>
+            <button class="repo-button secondary" id="repoExportCsv">Export saved CSV</button>
+          </div>
+          <div class="repo-stats"><span class="repo-stat">Loaded: <b class="repo-count" id="repoLoaded">0</b></span><span class="repo-stat">GitHub total estimate: <b class="repo-count" id="repoTotal">—</b></span><span class="repo-stat" id="repoSortLabel">Sort: most stars</span><span class="repo-stat">Saved: <b class="repo-count" id="repoSavedCount">0</b></span></div>
+          <div class="repo-grid" id="repoGrid" aria-live="polite"></div>
+          <div class="repo-pager"><button class="repo-button secondary repo-load" id="repoLoadMore">Load More</button><button class="repo-button secondary" id="repoReset">Reset</button></div>
+          <p class="repo-disclaimer">Static-site limitations: GitHub's unauthenticated rate limits apply, Search API results are capped at 1,000 per query, and a topic page may contain repositories not found by search. This tool cannot guarantee a complete permanent mirror of every topic repository. Saved repositories stay in this browser's local storage unless exported. Review project licenses, maintenance, and safety before use.</p>
+        </section>`;
+        const mainContent=document.getElementById('content');
+        if(mainContent)mainContent.insertAdjacentHTML('afterend',repoExplorerMarkup);
+        const repoState={page:1,topic:'jailbreaking',query:'',sort:'stars',busy:false,hasMore:true,total:0,seen:new Set(),items:[],savedOnly:false};
+        const $=id=>document.getElementById(id);
+        function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+        const SAVED_KEY='jailbreakvault.savedRepos.v1';
+        function readSaved(){try{return JSON.parse(localStorage.getItem(SAVED_KEY)||'{}')||{};}catch(e){return {};}}
+        function writeSaved(data){try{localStorage.setItem(SAVED_KEY,JSON.stringify(data));}catch(e){showToast('Browser storage is full or unavailable. Export your saved list.');}}
+        function updateSavedCount(){$('repoSavedCount').textContent=Object.keys(readSaved()).length.toLocaleString();}
+        function isSaved(fullName){return Object.prototype.hasOwnProperty.call(readSaved(),fullName);}
+        function toggleSaved(r){
+          const saved=readSaved();
+          if(saved[r.full_name])delete saved[r.full_name];
+          else saved[r.full_name]={full_name:r.full_name,html_url:r.html_url,description:r.description||'',stargazers_count:r.stargazers_count||0,forks_count:r.forks_count||0,language:r.language||'',updated_at:r.updated_at||'',topics:r.topics||[],license:r.license?.spdx_id||''};
+          writeSaved(saved);updateSavedCount();renderRepoCards();
+        }
+        function repoCard(r){
+          const topics=(r.topics||[]).slice(0,5), saved=isSaved(r.full_name);
+          return `<article class="repo-card" data-repo="${esc(r.full_name)}"><div class="repo-card-head"><h3><a href="${esc(r.html_url)}" target="_blank" rel="noopener noreferrer">${esc(r.full_name)}</a></h3><button class="repo-save ${saved?'is-saved':''}" data-save="${esc(r.full_name)}" aria-label="${saved?'Remove saved repository':'Save repository'}" title="${saved?'Remove saved repository':'Save repository'}">${saved?'Saved':'Save'}</button></div><p>${esc(r.description||'No description provided.')}</p><div class="repo-meta"><span class="repo-chip">Stars ${Number(r.stargazers_count||0).toLocaleString()}</span><span class="repo-chip">Forks ${Number(r.forks_count||0).toLocaleString()}</span><span class="repo-chip">${esc(r.language||'Unknown language')}</span><span class="repo-chip">Updated ${r.updated_at?new Date(r.updated_at).toLocaleDateString():'—'}</span><span class="repo-chip">License ${esc(r.license?.spdx_id||'Not specified')}</span></div><div class="repo-topics">${topics.map(t=>`<span>${esc(t)}</span>`).join('')}</div></article>`;
+        }
+        function setRepoStatus(message){$('repoGrid').innerHTML=`<div class="repo-status" style="grid-column:1/-1">${message}</div>`;}
+        function renderRepoCards(){
+          const source=repoState.savedOnly?Object.values(readSaved()):repoState.items;
+          const q=repoState.query.toLowerCase();
+          const filtered=source.filter(r=>!q||[r.full_name,r.description,r.language,(r.topics||[]).join(' ')].join(' ').toLowerCase().includes(q));
+          $('repoGrid').innerHTML=filtered.length?filtered.map(repoCard).join(''):'<div class="repo-status" style="grid-column:1/-1">No repositories match the current view. Try another keyword or turn off Saved only.</div>';
+          $('repoLoaded').textContent=source.length.toLocaleString();
+          $('repoGrid').querySelectorAll('[data-save]').forEach(btn=>btn.addEventListener('click',()=>{
+            const r=source.find(x=>x.full_name===btn.dataset.save)||Object.values(readSaved()).find(x=>x.full_name===btn.dataset.save);
+            if(r)toggleSaved(r);
+          }));
+        }
+        async function loadRepositories(reset=false){
+          if(repoState.busy)return;
+          if(reset){repoState.page=1;repoState.seen.clear();repoState.items=[];repoState.hasMore=true;repoState.total=0;$('repoGrid').innerHTML='';}
+          if(!repoState.hasMore){$('repoLoadMore').disabled=true;return;}
+          repoState.busy=true;$('repoSearch').disabled=true;$('repoLoadMore').disabled=true;
+          if(!repoState.items.length&&!repoState.savedOnly)setRepoStatus('<span class="repo-spinner"></span>Querying GitHub public API…');
+          else if(!repoState.savedOnly)$('repoGrid').insertAdjacentHTML('beforeend','<div class="repo-status" id="repoLoading" style="grid-column:1/-1"><span class="repo-spinner"></span>Loading more repositories…</div>');
+          const topic=$('repoTopic').value;const q=$('repoQuery').value.trim();const sort=$('repoSort').value;
+          repoState.topic=topic;repoState.query=q;repoState.sort=sort;
+          const apiQuery=[`topic:${topic}`,q].filter(Boolean).join(' ');
+          try{
+            const params='q='+encodeURIComponent(apiQuery)+'&sort='+encodeURIComponent(sort)+'&order=desc&per_page=30&page='+repoState.page;
+            const url='https://api.github.com/search/repositories?'+params;
+            const res=await fetch(url,{headers:{'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});
+            if(res.status===403||res.status===429)throw new Error('GitHub rate limit reached. Wait a while and retry; this static version does not use a backend or token.');
+            if(!res.ok)throw new Error('GitHub API returned HTTP '+res.status+'.');
+            const data=await res.json();
+            repoState.total=data.total_count||0;
+            repoState.hasMore=repoState.page*30<Math.min(repoState.total,1000)&&Array.isArray(data.items)&&data.items.length>0;
+            const fresh=(data.items||[]).filter(r=>!repoState.seen.has(r.full_name));
+            fresh.forEach(r=>{repoState.seen.add(r.full_name);repoState.items.push(r);});
+            $('repoTotal').textContent=repoState.total.toLocaleString()+(repoState.total>1000?' (search cap 1,000)':'');
+            const loading=$('repoLoading');if(loading)loading.remove();
+            repoState.page++;
+            $('repoLoadMore').disabled=!repoState.hasMore;
+            $('repoLoadMore').textContent=repoState.hasMore?'Load More':'No More Results';
+            $('repoSortLabel').textContent='Sort: '+({stars:'most stars',updated:'recently updated',forks:'most forks','help-wanted-issues':'help wanted'}[sort]||sort);
+            renderRepoCards();
+          }catch(err){
+            console.error(err);const loading=$('repoLoading');if(loading)loading.remove();
+            setRepoStatus(esc(err.message||'Unable to load GitHub repositories. Check your internet connection and retry.'));
+            $('repoLoadMore').disabled=false;$('repoLoadMore').textContent='Retry';
+          }finally{repoState.busy=false;$('repoSearch').disabled=false;}
+        }
+        function downloadText(filename,content,mime){
+          const blob=new Blob([content],{type:mime});const url=URL.createObjectURL(blob);
+          const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+        }
+        $('repoSearch').addEventListener('click',()=>{repoState.savedOnly=false;$('repoShowSaved').textContent='Saved only: Off';$('repoShowSaved').setAttribute('aria-pressed','false');loadRepositories(true);});
+        $('repoLoadMore').addEventListener('click',()=>loadRepositories(false));
+        $('repoReset').addEventListener('click',()=>{$('repoQuery').value='';$('repoTopic').value='jailbreaking';$('repoSort').value='stars';repoState.savedOnly=false;$('repoShowSaved').textContent='Saved only: Off';$('repoShowSaved').setAttribute('aria-pressed','false');loadRepositories(true);});
+        $('repoQuery').addEventListener('keydown',e=>{if(e.key==='Enter'){repoState.savedOnly?renderRepoCards():loadRepositories(true);}});
+        $('repoQuery').addEventListener('input',()=>{repoState.query=$('repoQuery').value.trim();if(repoState.savedOnly)renderRepoCards();});
+        $('repoTopic').addEventListener('change',()=>loadRepositories(true));
+        $('repoSort').addEventListener('change',()=>loadRepositories(true));
+        $('repoShowSaved').addEventListener('click',()=>{
+          repoState.savedOnly=!repoState.savedOnly;
+          $('repoShowSaved').textContent='Saved only: '+(repoState.savedOnly?'On':'Off');
+          $('repoShowSaved').setAttribute('aria-pressed',String(repoState.savedOnly));
+          $('repoLoadMore').disabled=repoState.savedOnly||!repoState.hasMore;
+          renderRepoCards();
+        });
+        $('repoExport').addEventListener('click',()=>{
+          const data=Object.values(readSaved());
+          if(!data.length){showToast('No saved repositories to export.');return;}
+          downloadText('jailbreakvault-saved-repositories.json',JSON.stringify(data,null,2),'application/json;charset=utf-8');
+        });
+        $('repoExportCsv').addEventListener('click',()=>{
+          const data=Object.values(readSaved());
+          if(!data.length){showToast('No saved repositories to export.');return;}
+          const cols=['full_name','html_url','description','stargazers_count','forks_count','language','updated_at','license'];
+          const quote=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+          const rows=[cols.join(','),...data.map(r=>cols.map(k=>quote(k==='license'?(r.license||''):r[k])).join(','))];
+          downloadText('jailbreakvault-saved-repositories.csv',rows.join('\r\n'),'text/csv;charset=utf-8');
+        });
+        updateSavedCount();
+        loadRepositories(true);
 
         // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         // 9. INIT: store original texts on load
@@ -1642,8 +1658,12 @@
             });
         });
 
-        console.log('🧠 Jailbreak Vault loaded successfully.');
-        console.log('❤️ Built by Humayun Shariar Himu');
+        if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+            window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(err => console.warn('Offline shell unavailable:', err)));
+        }
+
+        console.log('Jailbreak Vault loaded successfully.');
+        console.log('Built by Humayun Shariar Himu');
     </script>
 
 </body>
